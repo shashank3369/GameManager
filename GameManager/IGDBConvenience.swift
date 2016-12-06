@@ -12,11 +12,12 @@ import Foundation
 extension IGDBClient {
     
     
-    func getGames(completionHandlerForMovies: @escaping (_ result: [IGDBGame]?, _ error: NSError?) -> Void) -> URLSessionDataTask? {
+    func getPopularGames(completionHandlerForMovies: @escaping (_ result: [IGDBGame]?, _ error: NSError?) -> Void) -> URLSessionDataTask? {
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
-        var parameters: [String: AnyObject] = [IGDBClient.ParameterKeys.Fields: "name" as AnyObject]
-        parameters[IGDBClient.ParameterKeys.Limit] = 10 as AnyObject?
+        var parameters: [String: AnyObject] = [IGDBClient.ParameterKeys.Fields: "name,popularity" as AnyObject]
+        parameters[IGDBClient.ParameterKeys.Limit] = 50 as AnyObject?
+        parameters[IGDBClient.ParameterKeys.Order] = "popularity:desc" as AnyObject?
         /* 2. Make the request */
         let task = taskForGETMethod(Methods.Games, parameters: parameters as [String:AnyObject]) { (results, error) in
             

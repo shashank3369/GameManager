@@ -16,7 +16,7 @@ class GamesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        _ = IGDBClient.sharedInstance().getGames { (games, error) in
+        _ = IGDBClient.sharedInstance().getPopularGames { (games, error) in
             if let games = games {
                 self.games = games
                 DispatchQueue.main.async {

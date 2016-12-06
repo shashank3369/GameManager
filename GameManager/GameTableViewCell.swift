@@ -10,6 +10,7 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var gameTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

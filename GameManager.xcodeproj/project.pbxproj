@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8A64EE571DF5F1130041EB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE561DF5F1130041EB4F /* AppDelegate.swift */; };
-		8A64EE591DF5F1130041EB4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE581DF5F1130041EB4F /* ViewController.swift */; };
 		8A64EE5C1DF5F1130041EB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A64EE5A1DF5F1130041EB4F /* Main.storyboard */; };
 		8A64EE5E1DF5F1130041EB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A64EE5D1DF5F1130041EB4F /* Assets.xcassets */; };
 		8A64EE611DF5F1130041EB4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A64EE5F1DF5F1130041EB4F /* LaunchScreen.storyboard */; };
 		8A64EE6C1DF5F1130041EB4F /* GameManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE6B1DF5F1130041EB4F /* GameManagerTests.swift */; };
 		8A64EE771DF5F1130041EB4F /* GameManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE761DF5F1130041EB4F /* GameManagerUITests.swift */; };
+		8A64EE851DF5F4570041EB4F /* IGDBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE841DF5F4570041EB4F /* IGDBClient.swift */; };
+		8A64EE891DF5F4840041EB4F /* IGDBConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE881DF5F4840041EB4F /* IGDBConvenience.swift */; };
+		8A64EE8B1DF5F4FD0041EB4F /* IGDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE8A1DF5F4FD0041EB4F /* IGDBConstants.swift */; };
+		8A64EE8F1DF5F7E70041EB4F /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE8E1DF5F7E70041EB4F /* GamesTableViewController.swift */; };
+		8A64EE911DF5F81D0041EB4F /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE901DF5F81D0041EB4F /* GameTableViewCell.swift */; };
+		8A64EE931DF5F8FE0041EB4F /* IGDBGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE921DF5F8FE0041EB4F /* IGDBGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		8A64EE531DF5F1130041EB4F /* GameManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A64EE561DF5F1130041EB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A64EE581DF5F1130041EB4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A64EE5B1DF5F1130041EB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A64EE5D1DF5F1130041EB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A64EE601DF5F1130041EB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		8A64EE721DF5F1130041EB4F /* GameManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A64EE761DF5F1130041EB4F /* GameManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerUITests.swift; sourceTree = "<group>"; };
 		8A64EE781DF5F1130041EB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A64EE841DF5F4570041EB4F /* IGDBClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBClient.swift; sourceTree = "<group>"; };
+		8A64EE881DF5F4840041EB4F /* IGDBConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBConvenience.swift; sourceTree = "<group>"; };
+		8A64EE8A1DF5F4FD0041EB4F /* IGDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBConstants.swift; sourceTree = "<group>"; };
+		8A64EE8E1DF5F7E70041EB4F /* GamesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
+		8A64EE901DF5F81D0041EB4F /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		8A64EE921DF5F8FE0041EB4F /* IGDBGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,14 @@
 		8A64EE551DF5F1130041EB4F /* GameManager */ = {
 			isa = PBXGroup;
 			children = (
+				8A64EE8E1DF5F7E70041EB4F /* GamesTableViewController.swift */,
+				8A64EE921DF5F8FE0041EB4F /* IGDBGame.swift */,
 				8A64EE561DF5F1130041EB4F /* AppDelegate.swift */,
-				8A64EE581DF5F1130041EB4F /* ViewController.swift */,
 				8A64EE5A1DF5F1130041EB4F /* Main.storyboard */,
+				8A64EE901DF5F81D0041EB4F /* GameTableViewCell.swift */,
+				8A64EE841DF5F4570041EB4F /* IGDBClient.swift */,
+				8A64EE8A1DF5F4FD0041EB4F /* IGDBConstants.swift */,
+				8A64EE881DF5F4840041EB4F /* IGDBConvenience.swift */,
 				8A64EE5D1DF5F1130041EB4F /* Assets.xcassets */,
 				8A64EE5F1DF5F1130041EB4F /* LaunchScreen.storyboard */,
 				8A64EE621DF5F1130041EB4F /* Info.plist */,
@@ -262,8 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A64EE591DF5F1130041EB4F /* ViewController.swift in Sources */,
 				8A64EE571DF5F1130041EB4F /* AppDelegate.swift in Sources */,
+				8A64EE851DF5F4570041EB4F /* IGDBClient.swift in Sources */,
+				8A64EE891DF5F4840041EB4F /* IGDBConvenience.swift in Sources */,
+				8A64EE8F1DF5F7E70041EB4F /* GamesTableViewController.swift in Sources */,
+				8A64EE8B1DF5F4FD0041EB4F /* IGDBConstants.swift in Sources */,
+				8A64EE931DF5F8FE0041EB4F /* IGDBGame.swift in Sources */,
+				8A64EE911DF5F81D0041EB4F /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

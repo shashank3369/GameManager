@@ -10,12 +10,13 @@ import UIKit
 
 class GamesTableViewController: UITableViewController {
 
+    @IBOutlet weak var homeSegmentedControl: UISegmentedControl!
     var games = [IGDBGame]()
+    var genres = [IGDBGenre]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let task = IGDBClient.sharedInstance().getGames { (games, error) in
-            
+        _ = IGDBClient.sharedInstance().getGames { (games, error) in
             if let games = games {
                 self.games = games
                 DispatchQueue.main.async {
@@ -23,6 +24,15 @@ class GamesTableViewController: UITableViewController {
                 }
             }
         }
+        
+        _ = IGDBClient.sharedInstance().getGenres(completionHandlerForMovies: { (genres, error) in
+            if let genres = genres {
+                self.genres = genres
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +43,37 @@ class GamesTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return games.count
+        var numOfRows: Int = 0
+        switch homeSegmentedControl.selectedSegmentIndex {
+            case 0:
+                numOfRows = games.count
+            case 1:
+                numOfRows = genres.count
+            default:
+                break
+        }
+        return numOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let CellReuseId = "GameTableCell"
-        let game = games[(indexPath as NSIndexPath).row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseId) as! GameTableViewCell
         
-        cell.gameTitle.text = game.title
+        let CellReuseId = "GameTableCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseId) as! GameTableViewCell
+        switch homeSegmentedControl.selectedSegmentIndex {
+            case 0:
+                let game = games[(indexPath as NSIndexPath).row]
+                cell.gameTitle.text = game.title
+            case 1:
+                let genre = genres[(indexPath as NSIndexPath).row]
+                cell.gameTitle.text = genre.name
+            default:
+                break
+        }
         
         return cell
+    }
+    @IBAction func homeSegmentedControlChanged(_ sender: Any) {
+        tableView.reloadData()
     }
     
     

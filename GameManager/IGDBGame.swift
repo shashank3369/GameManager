@@ -23,14 +23,14 @@ struct IGDBGame {
     
     static func gamesFromResults(_ results: [[String:AnyObject]]) -> [IGDBGame] {
         
-        var movies = [IGDBGame]()
+        var games = [IGDBGame]()
         
         // iterate through array of dictionaries, each Movie is a dictionary
         for result in results {
-            movies.append(IGDBGame(dictionary: result))
+            games.append(IGDBGame(dictionary: result))
         }
         
-        return movies
+        return games
     }
     
 }

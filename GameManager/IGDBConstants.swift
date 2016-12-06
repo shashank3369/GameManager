@@ -25,6 +25,7 @@ extension IGDBClient {
     // MARK: Methods
     struct Methods {
         static let Games = "/games/"
+        static let Genres = "/genres/"
     }
     
     // MARK: Parameter Keys
@@ -37,5 +38,6 @@ extension IGDBClient {
     
     struct JSONResponseKeys {
         static let GameName = "name"
+        static let GenreName = "name"
     }
 }

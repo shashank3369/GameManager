@@ -35,6 +35,7 @@ extension IGDBClient {
         static let Fields = "fields"
         static let Limit = "limit"
         static let Order = "order"
+        static let Search = "search"
     }
     
     struct JSONResponseKeys {

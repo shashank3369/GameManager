@@ -75,7 +75,6 @@ class IGDBClient: NSObject {
             components.queryItems!.append(queryItem)
         }
         
-        print (components.url ?? "")
         return components.url!
         
     }

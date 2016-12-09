@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewsTableViewController: UITableViewController {
 
@@ -35,18 +36,48 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
+        // Configure the cell...
         cell.categoryLabel.text = "\(newsArticles[indexPath.row].category)"
         cell.titleLabel.text = newsArticles[indexPath.row].title
         
         if let image = newsArticles[indexPath.row].image {
-            let url = URL(string: image)
-            let data = try? Data(contentsOf: url!)
-            cell.newsImage.image = UIImage(data: data!)
+            cell.newsImage.image = nil
+            downloadImageWithURL(image, completionHandlerForImage: { (success, image) in
+                if success {
+                    DispatchQueue.main.async {
+                        cell.newsImage.image = image
+                    }
+                }
+            })
         }
-        
-        // Configure the cell...
 
         return cell
     }
 
+}
+
+extension NewsTableViewController {
+    func downloadImageWithURL(_ url: String, completionHandlerForImage: @escaping (_ success: Bool, _ image: UIImage?) -> Void) {
+        // create url
+        let imageURL = URL(string: url)!
+        
+        // create network request
+        let task = URLSession.shared.dataTask(with: imageURL) { (data, response, error) in
+            
+            if error == nil {
+                
+                // create image
+                let downloadedImage = UIImage(data: data!)
+                
+                completionHandlerForImage(true, downloadedImage)
+                
+            } else {
+                completionHandlerForImage(false, nil)
+            }
+        }
+        
+        // start network request
+        task.resume()
+
+    }
 }

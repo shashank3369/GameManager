@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8A1BD0461DF732170066D2D7 /* IGDBGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BD0451DF732170066D2D7 /* IGDBGenre.swift */; };
 		8A60F07A1DF898E100E5F849 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60F0791DF898E100E5F849 /* SearchViewController.swift */; };
+		8A60F07C1DFA2EA100E5F849 /* IGDBNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60F07B1DFA2EA100E5F849 /* IGDBNews.swift */; };
+		8A60F07E1DFA30A600E5F849 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60F07D1DFA30A600E5F849 /* NewsTableViewController.swift */; };
+		8A60F0801DFA328300E5F849 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A60F07F1DFA328300E5F849 /* NewsTableViewCell.swift */; };
 		8A64EE571DF5F1130041EB4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A64EE561DF5F1130041EB4F /* AppDelegate.swift */; };
 		8A64EE5C1DF5F1130041EB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A64EE5A1DF5F1130041EB4F /* Main.storyboard */; };
 		8A64EE5E1DF5F1130041EB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A64EE5D1DF5F1130041EB4F /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		8A1BD0451DF732170066D2D7 /* IGDBGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBGenre.swift; sourceTree = "<group>"; };
 		8A60F0791DF898E100E5F849 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8A60F07B1DFA2EA100E5F849 /* IGDBNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGDBNews.swift; sourceTree = "<group>"; };
+		8A60F07D1DFA30A600E5F849 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		8A60F07F1DFA328300E5F849 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8A64EE531DF5F1130041EB4F /* GameManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A64EE561DF5F1130041EB4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A64EE5B1DF5F1130041EB4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 				8A64EE841DF5F4570041EB4F /* IGDBClient.swift */,
 				8A64EE8A1DF5F4FD0041EB4F /* IGDBConstants.swift */,
 				8A64EE881DF5F4840041EB4F /* IGDBConvenience.swift */,
+				8A60F07B1DFA2EA100E5F849 /* IGDBNews.swift */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -111,6 +118,7 @@
 		8A1BD0491DF732B80066D2D7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8A60F07D1DFA30A600E5F849 /* NewsTableViewController.swift */,
 				8A60F0791DF898E100E5F849 /* SearchViewController.swift */,
 				8A64EE8E1DF5F7E70041EB4F /* GamesTableViewController.swift */,
 			);
@@ -138,6 +146,7 @@
 		8A1BD04C1DF732F60066D2D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A60F07F1DFA328300E5F849 /* NewsTableViewCell.swift */,
 				8A64EE901DF5F81D0041EB4F /* GameTableViewCell.swift */,
 			);
 			name = View;
@@ -333,8 +342,11 @@
 			files = (
 				8A64EE571DF5F1130041EB4F /* AppDelegate.swift in Sources */,
 				8A1BD0461DF732170066D2D7 /* IGDBGenre.swift in Sources */,
+				8A60F0801DFA328300E5F849 /* NewsTableViewCell.swift in Sources */,
 				8A64EE851DF5F4570041EB4F /* IGDBClient.swift in Sources */,
 				8A60F07A1DF898E100E5F849 /* SearchViewController.swift in Sources */,
+				8A60F07E1DFA30A600E5F849 /* NewsTableViewController.swift in Sources */,
+				8A60F07C1DFA2EA100E5F849 /* IGDBNews.swift in Sources */,
 				8A64EE891DF5F4840041EB4F /* IGDBConvenience.swift in Sources */,
 				8A64EE8F1DF5F7E70041EB4F /* GamesTableViewController.swift in Sources */,
 				8A64EE8B1DF5F4FD0041EB4F /* IGDBConstants.swift in Sources */,

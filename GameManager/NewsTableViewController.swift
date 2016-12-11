@@ -67,8 +67,9 @@ extension NewsTableViewController {
             if error == nil {
                 
                 // create image
-                let downloadedImage = UIImage(data: data!)
+                var downloadedImage = UIImage(data: data!)
                 
+                downloadedImage = downloadedImage?.resizeImage(newWidth: 100)
                 completionHandlerForImage(true, downloadedImage)
                 
             } else {
@@ -79,5 +80,20 @@ extension NewsTableViewController {
         // start network request
         task.resume()
 
+    }
+}
+
+
+extension UIImage {
+    func resizeImage(newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / self.size.width
+        let newHeight = self.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        self.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
 }

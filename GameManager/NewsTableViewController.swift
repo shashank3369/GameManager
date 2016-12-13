@@ -85,6 +85,7 @@ extension NewsTableViewController {
 
 
 extension UIImage {
+    
     func resizeImage(newWidth: CGFloat) -> UIImage {
         
         let scale = newWidth / self.size.width

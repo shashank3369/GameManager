@@ -15,10 +15,12 @@ struct IGDBGame {
     // MARK: Properties
     
     let title: String
+    let rating: Double?
     
     // MARK: Initializers
     init (dictionary: [String:AnyObject]) {
         title = dictionary[IGDBClient.JSONResponseKeys.GameName] as! String
+        rating = dictionary[IGDBClient.JSONResponseKeys.GameRating] as? Double
     }
     
     static func gamesFromResults(_ results: [[String:AnyObject]]) -> [IGDBGame] {

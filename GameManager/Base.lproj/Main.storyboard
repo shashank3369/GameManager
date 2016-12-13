@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QhS-vD-CY2" id="kwl-Q9-Lqh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ula-dM-xg0">
@@ -72,6 +73,63 @@
             </objects>
             <point key="canvasLocation" x="828" y="144.3778110944528"/>
         </scene>
+        <!--Game Detail View Controller-->
+        <scene sceneID="rgY-78-rnR">
+            <objects>
+                <viewController storyboardIdentifier="GameDetailViewController" id="Pev-wV-NbH" customClass="GameDetailViewController" customModule="GameManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5b-a5-edF"/>
+                        <viewControllerLayoutGuide type="bottom" id="vz1-7v-Yfa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D1V-uc-lVx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEp-id-UBL">
+                                <rect key="frame" x="16" y="70" width="343" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPR-FQ-EvT">
+                                <rect key="frame" x="16" y="128" width="99" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgk-c2-gQY">
+                                <rect key="frame" x="123" y="128" width="236" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="hcp-Pp-ldb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hgk-c2-gQY" firstAttribute="baseline" secondItem="SPR-FQ-EvT" secondAttribute="baseline" id="9II-Vi-B9B"/>
+                            <constraint firstItem="FEp-id-UBL" firstAttribute="leading" secondItem="D1V-uc-lVx" secondAttribute="leadingMargin" id="GkO-Wh-aSX"/>
+                            <constraint firstItem="FEp-id-UBL" firstAttribute="trailing" secondItem="D1V-uc-lVx" secondAttribute="trailingMargin" id="Oeo-YV-O5L"/>
+                            <constraint firstItem="FEp-id-UBL" firstAttribute="top" secondItem="T5b-a5-edF" secondAttribute="bottom" constant="50" id="Ogg-cH-hJo"/>
+                            <constraint firstItem="Hgk-c2-gQY" firstAttribute="leading" secondItem="SPR-FQ-EvT" secondAttribute="trailing" constant="8" symbolic="YES" id="Wgk-TJ-vAl"/>
+                            <constraint firstItem="SPR-FQ-EvT" firstAttribute="top" secondItem="FEp-id-UBL" secondAttribute="bottom" constant="8" symbolic="YES" id="ZIU-j3-FNs"/>
+                            <constraint firstItem="vz1-7v-Yfa" firstAttribute="top" secondItem="Hgk-c2-gQY" secondAttribute="bottom" constant="489" id="ZmJ-oF-y8q"/>
+                            <constraint firstItem="SPR-FQ-EvT" firstAttribute="leading" secondItem="FEp-id-UBL" secondAttribute="leading" id="bcl-QT-LXr"/>
+                            <constraint firstItem="Hgk-c2-gQY" firstAttribute="firstBaseline" secondItem="SPR-FQ-EvT" secondAttribute="firstBaseline" id="c5a-0E-OJC"/>
+                            <constraint firstItem="vz1-7v-Yfa" firstAttribute="top" secondItem="FEp-id-UBL" secondAttribute="bottom" constant="547" id="n8U-dG-G90"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameRating" destination="Hgk-c2-gQY" id="Jwk-wA-B8h"/>
+                        <outlet property="gameTitle" destination="FEp-id-UBL" id="nSS-ed-oe5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99f-V1-WcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.8" y="149.77511244377811"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="iDK-3A-dzk">
             <objects>
@@ -118,7 +176,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PPw-Gt-nDc" id="xpb-om-g8m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -163,7 +221,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pnu-r5-fPJ" id="Gjx-ji-hoZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFT-Y1-Cug">

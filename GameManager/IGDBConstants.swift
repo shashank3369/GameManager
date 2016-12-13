@@ -41,6 +41,7 @@ extension IGDBClient {
     
     struct JSONResponseKeys {
         static let GameName = "name"
+        static let GameRating = "aggregated_rating"
         static let GenreName = "name"
         static let NewsCategory = "category"
         static let NewsTitle = "title"

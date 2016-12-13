@@ -72,9 +72,19 @@ class GamesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let game = games[(indexPath as NSIndexPath).row]
+        let controller = storyboard!.instantiateViewController(withIdentifier: "GameDetailViewController") as! GameDetailViewController
+        controller.game = game
+        navigationController!.pushViewController(controller, animated: true)
+    }
+    
     @IBAction func homeSegmentedControlChanged(_ sender: Any) {
         tableView.reloadData()
     }
+    
+    
     
     
 }
